@@ -1,0 +1,4 @@
+1 creating virtual environment python = -m venv prefect_env
+2 activate the virtual environment = prefect_env\Scripts\Activate
+3 install prefect= "prefect>=3.17.0"
+4 verify prefect = prefect version
