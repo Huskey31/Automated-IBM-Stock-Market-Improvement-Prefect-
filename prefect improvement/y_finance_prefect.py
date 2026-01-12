@@ -19,8 +19,8 @@ def extract():
     df = yf.download("IBM", start="2024-11-01", end = None)
     logging.info("Data extraction completed successfully")
     return df
+    
 @task(retries = 4, retry_delay_seconds = 10)
-
 def transform(df):
     #Starting the data transformation process
     logging.info("Starting the data transformation process")
@@ -50,6 +50,7 @@ def y_finance_flow():
         load(df)
 if __name__=="__main__":
     y_finance_flow()
+
 
 
 
